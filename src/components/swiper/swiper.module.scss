@@ -1,0 +1,39 @@
+@import "../../styles/mixins";
+@import "../../styles/breakpoints";
+
+.swiper {
+  @include flex(column, center, center);
+  @include md {
+    margin-top: 0rem;
+    display: flex;
+  }
+  display: none;
+  margin-bottom: 10rem;
+  gap: 5rem;
+  border-radius: 2rem;
+  z-index: 5;
+  &__title {
+    @include flex(column, center, center);
+    letter-spacing: 0.25rem;
+    font-weight: 700;
+    
+  }
+}
+.swipeslider,
+.swipeslider img {
+  height: 300px;
+  @include md {
+    width: 400px;
+    height: 400px;
+  }
+  @include xxl {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+.img {
+  border-radius: 1rem;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}

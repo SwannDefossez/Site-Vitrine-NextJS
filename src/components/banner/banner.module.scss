@@ -1,0 +1,96 @@
+@import "../../styles/mixins";
+@import "../../styles/breakpoints";
+
+.banner {
+  @include flex(column, flex-start, center);
+  width: 100%;
+  max-height: 50rem;
+  background: linear-gradient(
+    22deg,
+    rgba(11, 33, 126, 1) 42%,
+    rgba(255, 57, 111, 1) 100%
+  );
+  @include lg {
+    @include flex(column, center, center);
+  }
+  &__worker {
+    width: 80vw;
+    height: auto;
+    max-width: 30rem;
+    @include lg {
+      width: 50vw;
+      max-width: 50rem;
+    }
+  }
+  &__content {
+    @include flex(column, center, center);
+    width: 80%;
+
+    gap: 1.5rem;
+    margin-top: 8rem;
+    color: white;
+    & h3 {
+      color: rgb(211, 213, 214);
+    }
+    @include lg {
+      @include flex(row, center, center);
+      margin-top: 8rem;
+      gap: 7vw;
+      margin-bottom: 4rem;
+    }
+  }
+  &__contact {
+    @include flex(row, center, center);
+    margin-top: 3rem;
+    width: 10rem;
+    background-color: rgb(128, 33, 216);
+    padding: 1rem;
+    border-radius: 2rem;
+    margin-bottom: 3rem;
+    @include sm {
+      margin-top: 2rem;
+    }
+  }
+  &__link {
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+    font-weight: 400;
+    
+  }
+  &__text {
+    margin-top: 5rem;
+    line-height: 2rem;
+    letter-spacing: 0.1rem;
+    @include xxl {
+      letter-spacing: 0.15rem;
+    }
+    @include flex(column, center, center);
+    & h1 {
+      font-weight: 500;
+      @include xxl {
+        font-size: 45px;
+      }
+    }
+    & h2 {
+      margin-top: 2rem;
+      font-weight: 400;
+      @include xxl {
+        font-size: 35px;
+        line-height: 2.8rem;
+      }
+    }
+    & h3 {
+      font-weight: 300;
+      @include xxl {
+        margin-top: 1rem;
+      }
+    }
+    @include md {
+      margin-top: 4rem;
+      & h2 {
+        margin-top: 4rem;
+      }
+    }
+  }
+}

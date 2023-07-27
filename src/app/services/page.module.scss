@@ -1,0 +1,20 @@
+@import "../../styles/mixins";
+@import "../../styles/breakpoints";
+
+.main {
+  @include flex(column, center, center);
+  @include xl {
+  height: 86.2vh;
+  }
+  height: 82vh;
+}
+
+.content {
+  
+  margin: 4rem;
+  & h2 {
+    letter-spacing: 0.25rem;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+}

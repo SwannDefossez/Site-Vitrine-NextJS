@@ -1,0 +1,32 @@
+@import "../../styles/mixins";
+@import "../../styles/breakpoints";
+
+.location {
+  width: 100%;
+  @include flex(column, center, center);
+  @include xl {
+      max-width: 50vw;
+  }
+  &__iframe {
+    max-width: 50vw;
+  }
+  &__content {
+    margin: 4rem;
+    width: 80%;
+    @include flex(column, center, center);
+
+    gap: 2rem;
+    & header {
+      text-align: center;
+      line-height: 2rem;
+      & h2 {
+        letter-spacing: 0.25rem;
+        font-weight: 700;
+      }
+      & h3 {
+        letter-spacing: 0.2rem;
+        font-weight: 400;
+      }
+    }
+  }
+}

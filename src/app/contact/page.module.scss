@@ -1,0 +1,40 @@
+@import "../../styles/mixins";
+@import "../../styles/breakpoints";
+
+.main {
+  @include flex(column, space-between, center);
+  @include xl {
+    @include flex(row, center, flex-start);
+    margin-top: 7.5rem;
+  }
+}
+
+.content {
+  margin: 4rem;
+  & h2 {
+    letter-spacing: 0.25rem;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  & ul {
+    list-style: none;
+    @include flex(column, center, center);
+    gap: 1rem;
+    letter-spacing: 0.15rem;
+    margin-top: 3rem;
+  }
+  &__info {
+    margin-top: 8rem;
+    @include xl {
+      margin-top: 0rem;
+      height: 60vh;
+      @include flex(column, space-between, center);
+    }
+  }
+  &__image {
+    display: none;
+    @include xl {
+      display: flex;
+    }
+  }
+}
